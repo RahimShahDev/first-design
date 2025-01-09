@@ -1,0 +1,250 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+.home {
+  color: white;
+  height: 100vh;
+  width: 100%;
+  background: url("/image-hero.jpg") no-repeat center center/cover;
+  padding: 0 100px;
+}
+#mobile{
+  display: none;
+}
+/* NavBar Section  */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding-top: 25px;
+}
+.navBar #logo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.navBar #navLinks ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navBar #navLinks ul li {
+  padding-right: 20px;
+  font-size: 1.25rem;
+  list-style: none;
+  margin: 10px;
+}
+.navBar #navLinks ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Home Section  */
+
+.home-contents {
+  max-width: 500px;
+  border: 5px solid white;
+  font-size: 3rem;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+/* Second Section  */
+.second-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.image-section {
+  position: relative;
+}
+.second-section .text {
+  position: absolute;
+  background-color: white;
+  font-size: 1.5rem;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
+  bottom: -16px;
+  right: -240px;
+}
+
+/* Third Section(OUR CRAETIONS) */
+.our-creations {
+  margin-top: 50px;
+}
+
+.our-creations #header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+}
+.our-creations #header button {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  font-weight: lighter;
+  margin: 15px;
+  margin-right: 5px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 25px 50px;
+  margin-bottom: 30px;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  transition: transform 500ms;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  left: 10px;
+}
+
+/* Footer Section  */
+
+footer {
+  background-color: black;
+  color: #fff;
+}
+#social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-links {
+  margin: 15px;
+}
+.footer-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+#footer-links ul {
+  display: flex;
+  padding: 15px;
+}
+#footer-second-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer #footer-links ul li {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px;
+}
+footer #footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media Query  */
+@media screen and (max-width: 1191px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 25px 50px;
+    margin-bottom: 30px;
+  }
+
+  .second-section {
+    display: flex;
+    margin-top: 70px;
+  }
+  .image-section {
+    position: relative;
+  }
+  .second-section .text {
+    position: relative;
+    font-size: 2rem;
+    bottom: 16px;
+    right: 10px;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-contents {
+    max-width: 500px;
+    font-size: 2rem;
+    padding: 20px;
+    border: none;
+    margin-top: 100px;
+  }
+  
+  #navLinks{
+    display: none;
+  }
+  #desktop{
+    display: none;
+  }
+  #mobile{
+    display: block;
+    width: 100vw;
+  }
+  .home {
+    color: white;
+    height: 100vh;
+    background: url("./mobile/image-hero.jpg") no-repeat center center/cover;
+    padding: 0 100px;
+  }
+
+  .second-section {
+    display: flex;
+    margin-top: 70px;
+    justify-content: flex-start;
+  }
+  .image-section {
+    position: relative;
+  }
+  .second-section .text {
+    font-size: 2rem;
+    bottom: 16px;
+    max-width: 700px;
+    margin-top: 12px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding: 25px 50px;
+    margin-bottom: 30px;
+  }
+
+  #social-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footer-second-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
